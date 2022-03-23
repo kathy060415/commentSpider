@@ -19,7 +19,8 @@ df['Day']=df['Date'].dt.day
 
 new_df = df.drop(['Day', 'Month', 'Year'], axis = 1)
 
-df.to_csv('comments_final', index = False)
+df.to_csv('comments_final.csv', index = False)
+df.to_json('comments_json.json')
 
 #     # # export to s3
 #     # tires_df = pd.read_csv("tires.csv")
